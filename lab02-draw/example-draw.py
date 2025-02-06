@@ -34,7 +34,7 @@ arcade.draw_rectangle_filled(800, 90, 40, 10, arcade.color.PLATINUM)
 
 #draw nube
 
-arcade.draw_ellipse_filled(550,510,95,250,[255,255,255],90,75)
+arcade.draw_ellipse_filled(550,511,95,250,[255,255,255],90,75)
 arcade.draw_circle_filled(550, 540, 50, arcade.color.WHITE)
 arcade.draw_circle_filled(500, 520, 50, arcade.color.WHITE)
 arcade.draw_circle_filled(600, 520, 50, arcade.color.WHITE)
