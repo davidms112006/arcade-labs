@@ -51,7 +51,7 @@ arcade.draw_circle_filled(650, 520, 50, arcade.color.WHITE)
 arcade.draw_lrtb_rectangle_filled(30, 350, 210, 170, arcade.color.BISQUE)
 
 # Bottom half
-arcade.draw_lrtb_rectangle_filled(30, 350, 550, 210, arcade.color.GRAY)
+arcade.draw_lrtb_rectangle_filled(30, 350, 550, 210, arcade.color.WHITE)
 
 # Left-bottom window
 arcade.draw_rectangle_filled(70, 375, 50, 300, arcade.color.BONE)
