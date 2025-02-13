@@ -6,6 +6,7 @@ import arcade
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 700
+
 def suelo ():
     # Draw the SUELO
     arcade.draw_lrtb_rectangle_filled(0, 800, 200, 0, arcade.color.LIGHT_GRAY)
@@ -23,15 +24,11 @@ def suelo ():
 def nube(x,y):
     # draw nube
 
-    arcade.draw_ellipse_filled(550+x, 510+y, 95, 250, [255, 255, 255], 90, 75)
-    arcade.draw_circle_filled(550+x, 540+y, 50, arcade.color.WHITE)
-    arcade.draw_circle_filled(500+x, 520+y, 50, arcade.color.WHITE)
-    arcade.draw_circle_filled(600+x, 520+y, 50, arcade.color.WHITE)
+    arcade.draw_ellipse_filled(150+x, 510+y, 95, 250, [255, 255, 255], 90, 75)
+    arcade.draw_circle_filled(150+x, 540+y, 50, arcade.color.WHITE)
+    arcade.draw_circle_filled(100+x, 520+y, 50, arcade.color.WHITE)
+    arcade.draw_circle_filled(200+x, 520+y, 50, arcade.color.WHITE)
 
-    arcade.draw_ellipse_filled(600, 510, 95, 250, arcade.color.WHITE, 90, 75)
-    arcade.draw_circle_filled(600, 540, 50, arcade.color.WHITE)
-    arcade.draw_circle_filled(550, 520, 50, arcade.color.WHITE)
-    arcade.draw_circle_filled(650, 520, 50, arcade.color.WHITE)
 
 def edificio ():
     # Barn cement base
@@ -81,20 +78,24 @@ def puerta():
     # POMO DE LA PUERTA
     arcade.draw_circle_filled(170, 220, 5, arcade.color.BLACK)
 
-def on_draw(delta_time)
+def on_draw(delta_time):
+    arcade.start_render()
+    suelo()
+    edificio()
+    ventanas()
+    puerta()
 
+    nube(on_draw.nube1_x, 100)
+    on_draw.nube1_x += 1
+
+
+on_draw.nube1_x = 100
 def main ():
         arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
         arcade.set_background_color(arcade.color.AIR_SUPERIORITY_BLUE)
-        arcade.start_render()
 
-        suelo()
-        nube(100,200)
-        edificio()
-        ventanas()
-        puerta()
+        arcade.schedule(on_draw, 1 / 60)
 
-        arcade.finish_render()
         arcade.run()
 
 main()
