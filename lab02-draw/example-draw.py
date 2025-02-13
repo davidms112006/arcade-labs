@@ -38,6 +38,15 @@ arcade.draw_ellipse_filled(550,510,95,250,[255,255,255],90,75)
 arcade.draw_circle_filled(550, 540, 50, arcade.color.WHITE)
 arcade.draw_circle_filled(500, 520, 50, arcade.color.WHITE)
 arcade.draw_circle_filled(600, 520, 50, arcade.color.WHITE)
+
+#draw nube right
+
+arcade.draw_ellipse_filled(600,510,95,250,arcade.color.WHITE,90,75)
+arcade.draw_circle_filled(600, 540, 50, arcade.color.WHITE)
+arcade.draw_circle_filled(550, 520, 50, arcade.color.WHITE)
+arcade.draw_circle_filled(650, 520, 50, arcade.color.WHITE)
+
+
 # Barn cement base
 arcade.draw_lrtb_rectangle_filled(30, 350, 210, 170, arcade.color.BISQUE)
 
