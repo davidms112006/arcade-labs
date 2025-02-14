@@ -29,6 +29,13 @@ def nube(x,y):
     arcade.draw_circle_filled(100+x, 520+y, 50, arcade.color.WHITE)
     arcade.draw_circle_filled(200+x, 520+y, 50, arcade.color.WHITE)
 
+def nube1(x,y):
+    # draw nube
+
+    arcade.draw_ellipse_filled(500+x, 510+y, 95, 250, [255, 255, 255], 90, 75)
+    arcade.draw_circle_filled(500+x, 540+y, 50, arcade.color.WHITE)
+    arcade.draw_circle_filled(450+x, 520+y, 50, arcade.color.WHITE)
+    arcade.draw_circle_filled(550+x, 520+y, 50, arcade.color.WHITE)
 
 def edificio ():
     # Barn cement base
@@ -84,11 +91,12 @@ def on_draw(delta_time):
     edificio()
     ventanas()
     puerta()
+    nube1(on_draw.nube1_x1, 50)
 
     nube(on_draw.nube1_x, 100)
     on_draw.nube1_x += 1
-
-
+    on_draw.nube1_x1 -= 1
+on_draw.nube1_x1 = 100
 on_draw.nube1_x = 100
 def main ():
         arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
