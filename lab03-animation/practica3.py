@@ -85,6 +85,8 @@ def puerta():
     # POMO DE LA PUERTA
     arcade.draw_circle_filled(170, 220, 5, arcade.color.BLACK)
 
+
+
 def on_draw(delta_time):
     arcade.start_render()
     suelo()
